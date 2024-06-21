@@ -26,8 +26,10 @@ function Navbar() {
             }
           <NavLink to="/aboutus" className="text-white hover:text-gray-300" activeClassName="font-bold">About Us</NavLink>
           <NavLink to="/contactus" className="text-white hover:text-gray-300" activeClassName="font-bold">Contact Us</NavLink>
-          {login&&
-          <NavLink to="/profile" className="text-white hover:text-gray-300" activeClassName="font-bold">Profile</NavLink>
+          {login&&<>
+          <NavLink to="/profile" className="text-white hover:text-gray-300" activeClassName="font-bold" onClick={toggleMenu}>Profile</NavLink>
+          <NavLink to="/charts" className="text-white hover:text-gray-300" activeClassName="font-bold" onClick={toggleMenu}>Charts</NavLink>
+          </>
             }
         </div>
         <div className="md:hidden">
@@ -51,8 +53,10 @@ function Navbar() {
           
           <NavLink to="/aboutus" className="text-white hover:text-gray-300" activeClassName="font-bold" onClick={toggleMenu}>About Us</NavLink>
           <NavLink to="/contactus" className="text-white hover:text-gray-300" activeClassName="font-bold" onClick={toggleMenu}>Contact Us</NavLink>
-          {login&&
+          {login&&<>
           <NavLink to="/profile" className="text-white hover:text-gray-300" activeClassName="font-bold" onClick={toggleMenu}>Profile</NavLink>
+          <NavLink to="/charts" className="text-white hover:text-gray-300" activeClassName="font-bold" onClick={toggleMenu}>Charts</NavLink>
+          </>
             }
         </div>
       )}

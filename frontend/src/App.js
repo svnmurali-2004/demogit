@@ -18,6 +18,7 @@ import {useLoader} from './context/LoaderContext'
 import {useLogin} from './context/LoginContext'
 import AboutUs from './pages/AboutUs'
 import ContactUs from './pages/ContactUs'
+import Charts from './pages/Charts'
 function App() {
       const {login,setLogin}=useLogin()
       const {loader}=useLoader()
@@ -48,6 +49,7 @@ function App() {
         <Route path="/signup" element={<SignUp />}/>
         <Route path="/loader" element={<Loader/>}/>
         <Route path="/contactus" element={<ContactUs/>}/>
+        <Route path="/charts" element={<Charts/>}/>
     </Routes>
 
      </>
